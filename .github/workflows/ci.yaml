@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, window-latest, macros-latest]
+        os: [ubuntu-latest, macros-latest]
 
     steps:
       - name: Code checkout
