@@ -8,7 +8,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macros-latest]
+        os: [ubuntu-latest]
+        version:['3.8','3.9','3.11']
 
     steps:
       - name: Code checkout
@@ -17,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: ${{ matrix.version }}
 
       - name: Install flake8
         run: |
